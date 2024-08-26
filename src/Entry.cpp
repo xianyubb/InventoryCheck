@@ -2,7 +2,7 @@
 #include "Global.h"
 #include "Language.h"
 
-ll::Logger logger(PLUGIN_NAME);
+ll::Logger logger(MOD_NAME);
 
 namespace InventoryCheck {
 
@@ -40,7 +40,7 @@ bool Entry::enable() {
 }
 
 bool Entry::disable() {
-    // Code for disabling the plugin goes here.
+    // Code for disabling the mod goes here.
     return true;
 }
 
@@ -55,7 +55,7 @@ LangI18n& Entry::getI18n() { return mI18n.value(); }
 
 } // namespace InventoryCheck
 
-LL_REGISTER_PLUGIN(InventoryCheck::Entry, InventoryCheck::Entry::getInstance());
+LL_REGISTER_MOD(InventoryCheck::Entry, InventoryCheck::Entry::getInstance());
 
 std::string tr(std::string const& key, std::vector<std::string> const& data) {
     return InventoryCheck::Entry::getInstance()->getI18n().get(key, data);

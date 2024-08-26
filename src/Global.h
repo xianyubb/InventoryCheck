@@ -1,7 +1,7 @@
 #pragma once
 #include <include_all.h>
 
-#define PLUGIN_NAME     "InventoryCheck"
+#define MOD_NAME     "InventoryCheck"
 #define TARGET_PROTOCOL 685
 
 extern ll::Logger logger;
